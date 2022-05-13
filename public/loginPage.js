@@ -7,7 +7,7 @@ userForm.loginFormCallback = (data) => {
         if(resp.success){
             location.reload();
         }else{
-            setLoginErrorMessage(message)
+            userForm.setLoginErrorMessage(resp.error)
         }
     })
 };
@@ -17,7 +17,7 @@ userForm.registerFormCallback = (data) =>{
         if(resp.success){
             location.reload();
         }else{
-            setRegisterErrorMessage(message);
+            userForm.setRegisterErrorMessage(resp.error);
         }
     })
 }
